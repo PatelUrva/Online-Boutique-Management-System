@@ -1,0 +1,12 @@
+<?php 
+    session_start();
+    if(empty($_SESSION["login_username"]))
+    {
+        header("location:login.php");
+    }
+?>
+    <?php 
+    session_start();
+    session_destroy();
+    header('location:index.php');
+?>
